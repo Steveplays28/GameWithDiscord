@@ -21,7 +21,7 @@ public class GameWithDiscord : ModuleRules
 		// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
 
 		//Include Discord GameSDK library files
-		PublicIncludePaths.Add(@"D:\Repos\ParkourFPS\Source\gamesdktest\discord-files");
+		PublicIncludePaths.Add(@"D:\Repos\ParkourFPS\Source\DiscordSDK\discord-files");
 		PublicAdditionalLibraries.Add(@"D:\Repos\ParkourFPS\Binaries\Win64\discord_game_sdk.dll.lib");
 
 #if PLATFORM_WINDOWS
