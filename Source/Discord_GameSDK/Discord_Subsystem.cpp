@@ -45,7 +45,7 @@ bool UDiscord_Subsystem::Tick(float DeltaSeconds)
 
 void UDiscord_Subsystem::Set_Details(FString Details) {
 	if (core != NULL) {
-		activity->SetDetails(TCHAR_TO_ANSI(*Details));
+		activity->SetDetails(StringCast<ANSICHAR>(*Details).Get());
 		core->ActivityManager().UpdateActivity(*activity, [](discord::Result result) {
 
 		});
@@ -57,7 +57,7 @@ void UDiscord_Subsystem::Set_Details(FString Details) {
 
 void UDiscord_Subsystem::Set_State(FString State) {
 	if (core != NULL) {
-		activity->SetState(TCHAR_TO_ANSI(*State));
+		activity->SetState(StringCast<ANSICHAR>(*State).Get());
 		core->ActivityManager().UpdateActivity(*activity, [](discord::Result result) {
 
 		});
@@ -93,8 +93,8 @@ void UDiscord_Subsystem::Remaining_Time_Timer(FDateTime Start_time) {
 
 void UDiscord_Subsystem::Set_Large_Image(FString Large_image_key, FString Large_image_text) {
 	if (core != NULL) {
-		activity->GetAssets().SetLargeImage(TCHAR_TO_ANSI(*Large_image_key));
-		activity->GetAssets().SetLargeText(TCHAR_TO_ANSI(*Large_image_text));
+		activity->GetAssets().SetLargeImage(StringCast<ANSICHAR>(*Large_image_key).Get());
+		activity->GetAssets().SetLargeText(StringCast<ANSICHAR>(*Large_image_text).Get());
 		core->ActivityManager().UpdateActivity(*activity, [](discord::Result result) {
 
 		});
@@ -106,8 +106,8 @@ void UDiscord_Subsystem::Set_Large_Image(FString Large_image_key, FString Large_
 
 void UDiscord_Subsystem::Set_Small_Image(FString Small_image_key, FString Small_image_text) {
 	if (core != NULL) {
-		activity->GetAssets().SetSmallImage(TCHAR_TO_ANSI(*Small_image_key));
-		activity->GetAssets().SetSmallText(TCHAR_TO_ANSI(*Small_image_text));
+		activity->GetAssets().SetSmallImage(StringCast<ANSICHAR>(*Small_image_key).Get());
+		activity->GetAssets().SetSmallText(StringCast<ANSICHAR>(*Small_image_text).Get());
 		core->ActivityManager().UpdateActivity(*activity, [](discord::Result result) {
 
 		});
