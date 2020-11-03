@@ -32,6 +32,6 @@
 ```
 If you're having trouble with this, look at how it's done in the example project.
 
-###### You're good to go! Good luck and have fun!
+#### You're good to go! Good luck and have fun!
 
 By Darion Spaargaren (Aka Steveplays/Steveplays28)
