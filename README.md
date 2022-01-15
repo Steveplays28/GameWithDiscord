@@ -36,5 +36,3 @@
 
 #### You're good to go! Good luck and have fun!
  If you're having trouble with this, please take a look at how it's done in the example project.
-
-## By Darion Spaargaren (Aka Steveplays/Steveplays28)
